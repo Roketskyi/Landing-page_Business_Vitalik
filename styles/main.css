@@ -1,13 +1,24 @@
-.button-container {
-    position: relative;
+main {
+    display: flex;
+    justify-content: space-between;
 }
 
 .showDropdown {
-    margin-bottom: 10px;
+    width: calc(33.33% - 10px); /* Вираховуємо 33.33% ширини мінус відступи */
+    margin: 10px 0;
 }
 
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
+.showDropdown {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #67bb44; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту */
+    font-size: 16px; /* Розмір тексту */
+    border: none; /* Видалити границю кнопки */
+    cursor: pointer; /* Змінити курсор при наведенні на кнопку */
+    transition: background-color 0.3s ease; /* Плавне змінення кольору фону при наведенні */
+}
+
+.showDropdown:hover {
+    background-color: #62a047; /* Колір фону при наведенні */
 }
