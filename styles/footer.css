@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+.footer-ads {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer-ads a {
+    text-decoration: none;
+    color: #969696;
+    transition: color 0.8s;
+}
+
+.footer-ads a:hover {
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-ads {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .contacts {
+        flex-basis: 100%;
+    }
+
+    .divGoogleMaps {
+        height: 300px;
+        flex-basis: 100%;
+    }
+
+    .footer-p {
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+
+    .contacts-h1 {
+        font-size: 29px;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contacts {
+        flex-basis: 50%;
+    }
+
+    .divGoogleMaps {
+        flex-basis: 50%;
+    }
+
+    .footer-p {
+        margin-bottom: 6px;
+        font-size: calc(0.3rem + 1vw);
+    }
+
+    .contacts-h1 {
+        font-size: calc(0.45rem + 1.6vw);
+        margin-bottom: 3rem;
+    }
+    
+    .contactsStreet {
+        font-size: calc(0.3rem + 1vw);
+    }
+}
+
+footer {    
+    margin-top: 32px;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    color: black; 
+    width: 100%;
+}
+
+.contacts {
+    padding: 32px 28px 18px 32px;
+    background-color:#e4e4e4;
+}
+
+.contactsMoreInfo {
+    font-size: 16px;
+}
+
+.divGoogleMaps {
+    border: 0;
+    overflow: hidden;
+}
+
+.googleMaps {
+    width: 100%;
+    height: 100%;
+}
+
+.contactsStreet {
+    margin: 3rem 0 3rem 0;
+}
+
+a {
+    color: #677eff;
+}
