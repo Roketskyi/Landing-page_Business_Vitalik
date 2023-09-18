@@ -75,6 +75,13 @@ hr {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.product-buttons button.active {
+    background-color: #67bb44; /* Зелений колір для активних кнопок */
+    color: #fff;
+    /* outline: 1px solid #000; */
+    box-shadow: 0 0 4px #000000e1; /* Тінь чорного кольору */
+}
+
 .product-buttons button:hover {
     background-color: #67bb44; /* Зелений колір при наведенні */
     color: #fff;
