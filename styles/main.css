@@ -51,7 +51,6 @@ hr {
     display: none;
 }
 
-
 .product-buttons {
     margin-top: 10px;
 }
@@ -92,3 +91,4 @@ hr {
     transform: translateY(-3px);
     transition: transform 0.2s ease;
 }
+
