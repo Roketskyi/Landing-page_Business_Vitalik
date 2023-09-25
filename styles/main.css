@@ -104,8 +104,35 @@ hr {
 }
 
 .image-content img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/**/
+.slide {
+    max-width: 100%;
+    max-height: 70%; /* Змініть це значення на бажаний розмір */
+    display: none;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #67bb44;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
 }
