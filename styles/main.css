@@ -136,3 +136,26 @@ hr {
 .next-button {
     right: 10px;
 }
+
+/* Стиль для списку ul з класом brickList */
+ul.brickList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стиль для пунктів списку li в класі brickList */
+ul.brickList li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Зміна кольорів при наведенні на пункт списку */
+ul.brickList li:hover {
+    background-color: #67bb44;
+    color: #fff;
+}
