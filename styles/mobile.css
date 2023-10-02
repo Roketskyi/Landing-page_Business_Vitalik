@@ -37,4 +37,9 @@
     .map {
         margin-top: 10px;
     }
+
+    .image-content img {
+        max-width: 100%; /* Adjust image width for smaller screens */
+        height: auto;
+    }
 }
