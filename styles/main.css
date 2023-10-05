@@ -1,3 +1,32 @@
+@media only screen and (min-width: 768px) {
+    .image-content img {
+        max-width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .prev-button {
+        left: 10px;
+    }
+    
+    .next-button {
+        right: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .image-content img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .prev-button,
+    .next-button {
+        display: none;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -103,39 +132,37 @@ hr {
     text-align: center;
 }
 
-.image-content img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/**/
 .slide {
     max-width: 100%;
-    max-height: 70%; /* Змініть це значення на бажаний розмір */
+    max-height: 70%;
     display: none;
+    transition: opacity 2s ease-in-out;
 }
 
 .prev-button, .next-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #67bb44;
-    color: #fff;
-    border: none;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
 }
 
-.prev-button {
-    left: 10px;
+.prev-button:hover, .next-button:hover {
+    background-color: #67bb44;
+    color: #fff;
 }
 
-.next-button {
-    right: 10px;
+.prev-button:active, .next-button:active {
+    background-color: #333;
+    color: #fff;
 }
+
 
 /* Стиль для списку ul з класом brickList */
 ul.brickList {
