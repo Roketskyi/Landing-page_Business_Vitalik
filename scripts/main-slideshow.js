@@ -1,10 +1,10 @@
 const mainImages = [
-    "/images/main.jpg",
-    "/images/Byklet_00001.png",
-    "/images/IMG_3516.JPG",
-    "/images/IMG_3160.JPG",
-    "/images/IMG_3150.JPG",
-    "/images/hotomir.JPG"
+    "./images/main.jpg",
+    "./images/Byklet_00001.png",
+    "./images/IMG_3516.JPG",
+    "./images/IMG_3160.JPG",
+    "./images/IMG_3150.JPG",
+    "./images/hotomir.JPG"
 ];
 
 let mainImageSlide = 0;
