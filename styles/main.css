@@ -33,6 +33,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -45,6 +49,12 @@ hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 20px 0;
+}
+
+.product-buttons ul.brickList li img {
+    vertical-align: middle; /* Вирівнювання стрілки вертикально посередині */
+    float: right;
+    margin-right: 10px;
 }
 
 .main {
@@ -162,18 +172,26 @@ hr {
     background-color: #333;
     color: #fff;
 }
+.arrow {
+    display: inline-block;
+    width: 20px; /* Розмір стрілочки */
+    height: 20px; /* Розмір стрілочки */
+    background-image: url('images/arrow-icon.png'); /* Шлях до зображення стрілочки */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 5px; /* Відступ між текстом та стрілочкою */
+}
 
 
 /* Стиль для списку ul з класом brickList */
 ul.brickList {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 /* Стиль для пунктів списку li в класі brickList */
 ul.brickList li {
-    padding: 8px 0;
+    padding: 8px 0 8px 8px;
     border-bottom: 1px solid #e0e0e0;
     font-size: 18px;
     color: #333;

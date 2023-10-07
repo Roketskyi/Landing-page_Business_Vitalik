@@ -13,10 +13,9 @@ function changeImage() {
     mainImageSlide = (mainImageSlide + 1) % mainImages.length;
     const headerImage = document.getElementById("mainImageSlide");
 
-    // Оновлюємо посилання FancyBox для всіх фотографій
     const fancyboxLinks = document.querySelectorAll('[data-fancybox="gallery"]');
     fancyboxLinks.forEach((link, index) => {
-        link.href = mainImages[(mainImageSlide + index - 1) % mainImages.length];
+        link.href = mainImages[(mainImageSlide + index) % mainImages.length];
     });
 
     headerImage.style.opacity = 0;
