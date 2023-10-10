@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     .image-content img {
-        max-width: 50%;
+        max-width: 96%;
         display: block;
         margin: 0 auto;
     }
@@ -11,6 +11,17 @@
     
     .next-button {
         right: 10px;
+    }
+
+    .image-block {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Відступ снизу */
+        max-width: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -24,6 +35,17 @@
     .prev-button,
     .next-button {
         display: none;
+    }
+
+    .image-block {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Відступ снизу */
+        max-width: 75%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -43,6 +65,14 @@ body {
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #333;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../images/main.jpg');
+    /* background-color: white; */
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-position: center;
+    height: 100vh;
 }
 
 hr {
@@ -129,17 +159,6 @@ hr {
 .product-buttons button:hover {
     transform: translateY(-3px);
     transition: transform 0.2s ease;
-}
-
-.image-block {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Відступ снизу */
-    max-width: 75%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .slide {
