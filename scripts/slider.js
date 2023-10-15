@@ -5,6 +5,7 @@ const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
 let currentIndex = 0;
+let timer; // Змінна для автоматичної зміни слайдів
 
 // Функція для перемикання слайдів вперед
 function nextSlide() {
@@ -35,9 +36,28 @@ function updateSlider() {
     });
 }
 
+// Функція для початку автоматичної зміни слайдів
+function startAutoSlide() {
+    timer = setInterval(nextSlide, 8000);
+}
+
+// Функція для зупинки автоматичної зміни слайдів
+function stopAutoSlide() {
+    clearInterval(timer);
+}
+
 // Додавання обробників подій на кнопки
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', () => {
+    nextSlide();
+    stopAutoSlide(); // Зупиняємо автоматичну зміну слайдів при кліці на кнопку
+    startAutoSlide(); // Починаємо автоматичну зміну слайдів знову
+});
+prevButton.addEventListener('click', () => {
+    prevSlide();
+    stopAutoSlide(); // Зупиняємо автоматичну зміну слайдів при кліці на кнопку
+    startAutoSlide(); // Починаємо автоматичну зміну слайдів знову
+});
 
 // Початкова ініціалізація слайдера
 updateSlider();
+startAutoSlide(); // Запускаємо автоматичну зміну слайдів

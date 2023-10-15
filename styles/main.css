@@ -222,4 +222,7 @@ ul.brickList li {
 ul.brickList li:hover {
     background-color: #67bb44;
     color: #fff;
+    border-radius: 4px;
+
+    box-shadow: 0 0 3px #000000e1;
 }
