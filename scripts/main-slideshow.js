@@ -17,12 +17,14 @@ let mainImageSlide = 0;
 function changeImage() {
     mainImageSlide = (mainImageSlide + 1) % mainImages.length;
     const headerImage = document.getElementById("mainImageSlide");
+
+    // Змінити прозорість зображення перед зміною src
     headerImage.style.opacity = 0;
 
     setTimeout(() => {
-        headerImage.src = mainImages[mainImageSlide];
-        headerImage.style.opacity = 1;
+      headerImage.src = mainImages[mainImageSlide];
+      headerImage.style.opacity = 1;
     }, 1500);
-}
+  }
 
 setInterval(changeImage, 8000);

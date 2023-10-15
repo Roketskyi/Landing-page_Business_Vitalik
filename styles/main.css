@@ -158,7 +158,7 @@ hr {
 /* Додайте плавний ефект підняття кнопки при наведенні */
 .product-buttons button:hover {
     transform: translateY(-3px);
-    transition: transform 0.2s ease;
+    transition: opacity 1.5s; /* Додано анімацію прозорості */
 }
 
 .slide {
