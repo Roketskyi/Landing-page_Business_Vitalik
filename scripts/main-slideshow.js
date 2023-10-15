@@ -25,6 +25,6 @@ function changeImage() {
       headerImage.src = mainImages[mainImageSlide];
       headerImage.style.opacity = 1;
     }, 1500);
-  }
+}
 
 setInterval(changeImage, 8000);

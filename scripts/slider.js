@@ -38,7 +38,7 @@ function updateSlider() {
 
 // Функція для початку автоматичної зміни слайдів
 function startAutoSlide() {
-    timer = setInterval(nextSlide, 11000);
+    timer = setInterval(nextSlide, 8000);
 }
 
 // Функція для зупинки автоматичної зміни слайдів

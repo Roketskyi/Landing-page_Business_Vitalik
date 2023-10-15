@@ -158,14 +158,14 @@ hr {
 /* Додайте плавний ефект підняття кнопки при наведенні */
 .product-buttons button:hover {
     transform: translateY(-3px);
-    transition: opacity 1.5s; /* Додано анімацію прозорості */
+    transition: transform 0.2s ease;
 }
 
 .slide {
     max-width: 100%;
     max-height: 70%;
     display: none;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1.5s; /* Додано анімацію прозорості */
 }
 
 .prev-button, .next-button {
