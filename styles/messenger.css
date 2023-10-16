@@ -1,0 +1,42 @@
+#divViber {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    margin: 0 -25px 30px;
+    position: fixed;
+    transform: translate(0%, 0%);
+    align-items: center;
+}
+.viber:hover,
+.whatsapp:hover,
+.telegram:hover {
+    opacity: 0.8;
+}
+
+.circle {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: rgb(236, 130, 0);
+  cursor: pointer;
+  animation: pulse 2s linear infinite;
+}
+
+.circle__plus,
+.circle__minus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 42px;
+    font-weight: bold;
+
+    user-select: none;
+}
