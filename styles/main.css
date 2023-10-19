@@ -5,23 +5,19 @@
         margin: 0 auto;
     }
 
-    .prev-button {
-        left: 10px;
-    }
-    
-    .next-button {
-        right: 10px;
-    }
-
     .image-block {
         background-color: #fff;
-        padding: 20px;
+        padding: 12px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px; /* Відступ снизу */
-        max-width: 50%;
+        max-width: 25%;
         margin: 0 auto;
         margin-bottom: 20px;
         text-align: center;
+    }
+    
+    .products {
+        width: 35%;
     }
 }
 
@@ -30,11 +26,6 @@
         max-width: 100%;
         display: block;
         margin: 0 auto;
-    }
-
-    .prev-button,
-    .next-button {
-        display: none;
     }
 
     .image-block {
@@ -46,6 +37,11 @@
         margin: 0 auto;
         margin-bottom: 20px;
         text-align: center;
+    }
+    
+    .products {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -66,7 +62,7 @@ body {
     background-color: #f5f5f5;
     color: #333;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../images/main.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../images/main.jpg');
     /* background-color: white; */
     background-size: cover;
     background-attachment: fixed;
@@ -77,7 +73,7 @@ body {
 
 hr {
     border: none;
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
     margin: 20px 0;
 }
 
@@ -91,14 +87,8 @@ hr {
     padding: 20px;
 }
 
-.products {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .product {
-    background-color: #fff;
+    background-color: #000;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -108,7 +98,7 @@ hr {
 .product h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    color: #fff;
 }
 
 .product p {
@@ -126,8 +116,8 @@ hr {
 
 .product-buttons button {
     width: 100%;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #363636;
+    color: #ececec;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -168,41 +158,6 @@ hr {
     transition: opacity 1.5s; /* Додано анімацію прозорості */
 }
 
-.prev-button, .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: #333;
-    border: 2px solid #333;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 18px;
-}
-
-.prev-button:hover, .next-button:hover {
-    background-color: #67bb44;
-    color: #fff;
-}
-
-.prev-button:active, .next-button:active {
-    background-color: #333;
-    color: #fff;
-}
-.arrow {
-    display: inline-block;
-    width: 20px; /* Розмір стрілочки */
-    height: 20px; /* Розмір стрілочки */
-    background-image: url('images/arrow-icon.png'); /* Шлях до зображення стрілочки */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-left: 5px; /* Відступ між текстом та стрілочкою */
-}
-
-
 /* Стиль для списку ul з класом brickList */
 ul.brickList {
     list-style-type: none;
@@ -213,9 +168,13 @@ ul.brickList li {
     padding: 8px 0 8px 8px;
     border-bottom: 1px solid #e0e0e0;
     font-size: 18px;
-    color: #333;
+    color: #fff;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
+}
+
+.brickList h4 {
+    color: #e6e6e6;
 }
 
 /* Зміна кольорів при наведенні на пункт списку */
@@ -225,4 +184,20 @@ ul.brickList li:hover {
     border-radius: 4px;
 
     box-shadow: 0 0 3px #000000e1;
+}
+
+/* .container-product-buttons {
+    display: none;
+} */
+
+.container-product-buttons {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 1.3s ease;
+}
+  
+.container-product-buttons.open {
+    max-height: 1000px; /* Достатньо велика висота для відображення вмісту */
+    opacity: 1;
 }

@@ -21,8 +21,8 @@ brickButtons.forEach(function (button, index) {
 
     button.addEventListener("mouseleave", function () {
         if (!button.classList.contains("active")) {
-            button.style.backgroundColor = "#f5f5f5"; // Поверніть початковий колір при виході з кнопки
-            button.style.color = "#333";
+            button.style.backgroundColor = "#363636"; // Поверніть початковий колір при виході з кнопки
+            button.style.color = "#fff";
         }
     });
 });

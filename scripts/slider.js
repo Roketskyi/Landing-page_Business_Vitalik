@@ -1,8 +1,6 @@
 // Отримуємо елементи з DOM
 const sliderContainer = document.querySelector('.image-content');
 const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
 
 let currentIndex = 0;
 let timer; // Змінна для автоматичної зміни слайдів
@@ -45,18 +43,6 @@ function startAutoSlide() {
 function stopAutoSlide() {
     clearInterval(timer);
 }
-
-// Додавання обробників подій на кнопки
-nextButton.addEventListener('click', () => {
-    nextSlide();
-    stopAutoSlide(); // Зупиняємо автоматичну зміну слайдів при кліці на кнопку
-    startAutoSlide(); // Починаємо автоматичну зміну слайдів знову
-});
-prevButton.addEventListener('click', () => {
-    prevSlide();
-    stopAutoSlide(); // Зупиняємо автоматичну зміну слайдів при кліці на кнопку
-    startAutoSlide(); // Починаємо автоматичну зміну слайдів знову
-});
 
 // Початкова ініціалізація слайдера
 updateSlider();
