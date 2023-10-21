@@ -1,48 +1,39 @@
+img[src="./images/arrow-icon-white.png"] {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
-    .image-content img {
-        max-width: 96%;
-        display: block;
-        margin: 0 auto;
+    img[src="./images/arrow-icon-white.png"] {
+        display: inline; /* Показуєте значки знову */
     }
 
     .image-block {
         background-color: #fff;
         padding: 12px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px; /* Відступ снизу */
-        max-width: 25%;
-        /* margin: 0 auto; */
         margin-bottom: 20px;
-        width: 19%;
-        /* text-align: center; */
+        width: 256px;
     }
     
-    .products {
-        width: 19%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
     .image-content img {
-        max-width: 100%;
+        max-width: 96%;
         display: block;
         margin: 0 auto;
     }
 
-    .image-block {
-        background-color: #fff;
+    .products {
+        width: 256px;
+    }
+
+    .product {
+        background-color: #000;
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px; /* Відступ снизу */
-        max-width: 75%;
-        margin: 0 auto;
         margin-bottom: 20px;
-        text-align: center;
-    }
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
     
-    .products {
-        display: flex;
-        flex-wrap: wrap;
+        cursor: pointer;
     }
 }
 
@@ -64,7 +55,6 @@ body {
     color: #333;
 
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../images/main.jpg');
-    /* background-color: white; */
     background-size: cover;
     background-attachment: fixed;
 
@@ -74,12 +64,11 @@ body {
 
 hr {
     border: none;
-    /* border-top: 1px solid #ddd; */
     margin: 20px 0;
 }
 
 .product-buttons ul.brickList li img {
-    vertical-align: middle; /* Вирівнювання стрілки вертикально посередині */
+    vertical-align: middle;
     float: right;
     margin-right: 10px;
 }
@@ -88,26 +77,18 @@ hr {
     padding: 20px;
 }
 
-.product {
-    background-color: #000;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    cursor: pointer;
+.product h2 {
+    font-size: 1.3em;
+    color: #fff;
 }
 
-.product h2 {
-    font-size: 24px;
-    color: #fff;
+.hidden {
+    display: none;
 }
 
 .product p {
     font-size: 16px;
     color: #666;
-}
-
-.hidden {
-    display: none;
 }
 
 .product-buttons {
@@ -134,18 +115,16 @@ hr {
 }
 
 .product-buttons button.active {
-    background-color: #67bb44; /* Зелений колір для активних кнопок */
+    background-color: #67bb44;
     color: #fff;
-    /* outline: 1px solid #000; */
-    box-shadow: 0 0 4px #000000e1; /* Тінь чорного кольору */
+    box-shadow: 0 0 4px #000000e1;
 }
 
 .product-buttons button:hover {
-    background-color: #67bb44; /* Зелений колір при наведенні */
+    background-color: #67bb44; 
     color: #fff;
 }
 
-/* Додайте плавний ефект підняття кнопки при наведенні */
 .product-buttons button:hover {
     transform: translateY(-3px);
     transition: transform 0.2s ease;
@@ -155,15 +134,13 @@ hr {
     max-width: 100%;
     max-height: 70%;
     display: none;
-    transition: opacity 1.5s; /* Додано анімацію прозорості */
+    transition: opacity 1.5s; 
 }
 
-/* Стиль для списку ul з класом brickList */
 ul.brickList {
     list-style-type: none;
 }
 
-/* Стиль для пунктів списку li в класі brickList */
 ul.brickList li {
     padding: 8px 0 8px 8px;
     border-bottom: 1px solid #e0e0e0;
@@ -177,7 +154,6 @@ ul.brickList li {
     color: #e6e6e6;
 }
 
-/* Зміна кольорів при наведенні на пункт списку */
 ul.brickList li:hover {
     background-color: #67bb44;
     color: #fff;
@@ -185,10 +161,6 @@ ul.brickList li:hover {
 
     box-shadow: 0 0 3px #000000e1;
 }
-
-/* .container-product-buttons {
-    display: none;
-} */
 
 .container-product-buttons {
     max-height: 0;
@@ -198,17 +170,16 @@ ul.brickList li:hover {
 }
   
 .container-product-buttons.open {
-    max-height: 1000px; /* Достатньо велика висота для відображення вмісту */
+    max-height: 1000px;
     opacity: 1;
 }
 
-/* Стиль для значків у правому верхньому куті колонки */
 .product-header ::after {
-  content: ""; /* Пустий контент для вставки значка */
+  content: "";
   background: url('../images/arrow-icon-white.png') no-repeat;
-  background-size: 20px 20px; /* Розмір значка */
+  background-size: 20px 20px; 
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-left: 10px; /* Відступ між текстом кнопки та значком */
+  margin-left: 10px;
 }
